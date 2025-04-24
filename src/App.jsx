@@ -5,13 +5,14 @@ import { loadBooks } from "./features/LoaderReducer";
 import { loadMyBooks } from "./features/CreateBookReducer";
 import { loadLikedBooks } from "./features/LikedBooksReducer";
 import MyBooks from "./pages/MyBooks/MyBooks";
-import Debugger from "./pages/Debugger/Debugger";
 import Home from "./pages/Home/Home";
 import Header from "./components/Header/Header";
 import BookPreview from "./pages/BookPreview/BookPreview";
 import LikedBooks from "./pages/LikedBooks/LikedBooks";
 import booksJson from "./assets/books.json";
+import Error from "./pages/Error/Error";
 import "./App.scss";
+
 
 function App() {
   const dispatch = useDispatch();
@@ -19,6 +20,7 @@ function App() {
   useEffect(() => {
     dispatch(loadBooks(booksJson));
     dispatch(loadMyBooks(JSON.parse(localStorage.getItem("mybooks")) || []));
+    dispatch(loadLikedBooks(JSON.parse(localStorage.getItem("likedBooks")) || []));
   }, [dispatch]);
 
   return (
@@ -28,9 +30,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/mybooks" element={<MyBooks />} />
-          <Route path="/debug" element={<Debugger />} />
           <Route path="/bookpreview" element={<BookPreview />} />
           <Route path="/likedbooks" element={<LikedBooks />} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </Router>
     </div>
