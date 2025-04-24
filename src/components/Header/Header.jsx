@@ -5,7 +5,7 @@ import "./styles.scss";
 
 function Header() {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" className="mb-3">
+    <Navbar bg="primary" variant="primary" expand="lg" className="mb-3">
       <Container>
         <Navbar.Brand as={Link} to="/">
           📚 Developer Book Site
