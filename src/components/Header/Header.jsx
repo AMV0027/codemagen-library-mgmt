@@ -10,8 +10,8 @@ function Header() {
         <Navbar.Brand as={Link} to="/">
           📚 Developer Book Site
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse>
+        <Navbar.Toggle bg="light" variant="light" aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse bg="primary" variant="primary">
           <Nav className="ms-auto">
             <Nav.Link as={Link} to="/">
               Home

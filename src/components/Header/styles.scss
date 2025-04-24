@@ -15,7 +15,7 @@ $navbar-text-color: #ffffff;
 
   .nav-link {
     color: $navbar-text-color;
-    font-size: .08rem;
+    font-size: 1.2rem;
     &:hover {
       color: color.adjust($navbar-text-color, $lightness: 10%);
     }
