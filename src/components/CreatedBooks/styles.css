@@ -1,0 +1,24 @@
+.card-img-custom {
+  height: 320px;
+  object-fit: contain;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.link-no-decoration {
+  text-decoration: none;
+}
+
+.card-body-custom {
+  padding: 1.25rem;
+}
+
+.badge-custom {
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.no-books-card {
+  max-width: 400px;
+}

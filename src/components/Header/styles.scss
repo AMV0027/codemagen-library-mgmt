@@ -1,0 +1,22 @@
+@use "sass:color";
+
+$navbar-bg-color: #343a40;
+$navbar-text-color: #ffffff;
+
+.navbar {
+  background-color: $navbar-bg-color;
+
+  .navbar-brand {
+    color: $navbar-text-color;
+    &:hover {
+      color: color.adjust($navbar-text-color, $lightness: 10%);
+    }
+  }
+
+  .nav-link {
+    color: $navbar-text-color;
+    &:hover {
+      color: color.adjust($navbar-text-color, $lightness: 10%);
+    }
+  }
+}
