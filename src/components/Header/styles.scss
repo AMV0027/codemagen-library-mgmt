@@ -1,6 +1,6 @@
 @use "sass:color";
 
-$navbar-bg-color: #343a40;
+$navbar-bg-color: #ffffff;
 $navbar-text-color: #ffffff;
 
 .navbar {
@@ -15,6 +15,7 @@ $navbar-text-color: #ffffff;
 
   .nav-link {
     color: $navbar-text-color;
+    font-size: .08rem;
     &:hover {
       color: color.adjust($navbar-text-color, $lightness: 10%);
     }

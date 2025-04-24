@@ -148,11 +148,7 @@ function CreateBook() {
                     {...register("isbn", {
                       required: "ISBN is required",
                       value: faker.commerce.isbn(10),
-                      pattern: {
-                        value: /^\d{1}-\d{5}-\d{3}-[\dX]$/,
-                        message: "ISBN must follow the format X-XXXXX-XXX-X, where X is a digit or 'X' as the check digit",
-                      },
-                    })}
+                    }, { min: 10, max: 13, message: "ISBN must be 10 or 13 characters" })}
                     isInvalid={!!errors.isbn}
                   />
                   <Form.Control.Feedback type="invalid">
